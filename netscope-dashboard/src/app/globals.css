@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f2f2f0;
+  --foreground: #14141a;
+
+  --surface-1: #ffffff;
+  --text-primary: #14141a;
+  --text-secondary: #6b6b70;
+  --text-muted: #9a9a9e;
+  --gridline: #ececea;
+  --baseline: #d8d8d6;
+  --border-hairline: rgba(20, 20, 26, 0.08);
+
+  /* chrome accent (buttons, active pill, capacity/progress bars) —
+     separate from the chart categorical palette below */
+  --accent: #ff6a3d;
+  --pill-bg: #14141a;
+  --pill-fg: #ffffff;
+  --card-radius: 20px;
+  --card-shadow: 0 1px 2px rgba(20, 20, 26, 0.04), 0 8px 24px rgba(20, 20, 26, 0.06);
+
+  --series-1: #2a78d6; /* blue */
+  --series-2: #eb6834; /* orange */
+  --series-3: #1baf7a; /* aqua */
+  --series-4: #eda100; /* yellow */
+  --series-5: #e87ba4; /* magenta */
+  --series-6: #008300; /* green */
+  --series-7: #4a3aa7; /* violet */
+  --series-8: #e34948; /* red */
+
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+
+  --sequential-500: #256abf;
+  --sequential-400: #3987e5;
+  --sequential-300: #6da7ec;
+  --sequential-200: #9ec5f4;
+
+  /* dark card tokens, for panels that stay dark regardless of page theme
+     (e.g. the map), independent of the light dashboard base above */
+  --dark-card-bg: #14141c;
+  --dark-card-fg: #ffffff;
+  --dark-card-muted: #8a8a92;
+  --dark-card-grid: #26262f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root[data-theme="dark"] {
+  --background: #0d0d0d;
+  --foreground: #ffffff;
+
+  --surface-1: #1a1a19;
+  --text-primary: #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted: #898781;
+  --gridline: #2c2c2a;
+  --baseline: #383835;
+  --border-hairline: rgba(255, 255, 255, 0.1);
+
+  --pill-bg: #ffffff;
+  --pill-fg: #14141a;
+
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --series-5: #d55181;
+  --series-6: #008300;
+  --series-7: #9085e9;
+  --series-8: #e66767;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
